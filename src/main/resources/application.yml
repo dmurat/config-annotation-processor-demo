@@ -1,0 +1,5 @@
+com.example.demo.my-groovy-config.simple-property: groovy simpleProperty configured value
+com.example.demo.my-groovy-config.nested.nested-property: groovy nestedProperty configured value
+
+com.example.demo.my-java-config.simple-property: java simpleProperty configured value
+com.example.demo.my-java-config.nested.nested-property: java nestedProperty configured value
