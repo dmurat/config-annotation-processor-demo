@@ -1,0 +1,28 @@
+{
+  "hints": [
+    {
+      "name": "com.example.demo.my-java-config.simple-property",
+      "values": [
+        { "value": "java simple - 123" },
+        { "value": "java simple - 456" },
+        { "value": "java simple - 789" },
+        { "value": "java simple - anything else" }
+      ],
+      "providers": [
+        { "name": "any" }
+      ]
+    },
+    {
+      "name": "com.example.demo.my-groovy-config.simple-property",
+      "values": [
+        { "value": "groovy simple - 123" },
+        { "value": "groovy simple - 456" },
+        { "value": "groovy simple - 789" },
+        { "value": "groovy simple - anything else" }
+      ],
+      "providers": [
+        { "name": "any" }
+      ]
+    }
+  ]
+}
