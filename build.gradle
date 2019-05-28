@@ -22,6 +22,20 @@ dependencies {
   testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
+// ====================
+// IDEA workaround for (re)importing Gradle Groovy project.
+// --------------------
+// When importing Groovy project, IDEA will erroneously look for Java source sets (instead for Groovy source sets) to setup module output directories (In IDEA this setting can be found under
+// Project Structure -> Project Settings -> [module name] -> main/test -> Use module compile output path). Therefore we end up with module output directories of "build/classes/java/main" instead
+// with "build/classes/groovy/main".
+//
+// That IDEA settings collide with outputs of Spring Boot configuration processor which will output Spring Boot metadata configuration files in the right location where IDEA can not find it. To force
+// IDEA to use correct module's compile output path following two modifications are needed.
+// --------------------
+sourceSets.main.java.outputDir = file("build/classes/groovy/main")
+sourceSets.test.java.outputDir = file("build/classes/groovy/test")
+// ====================
+
 compileGroovy {
   groovyOptions.javaAnnotationProcessing = true
 }
