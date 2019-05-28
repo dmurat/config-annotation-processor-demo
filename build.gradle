@@ -14,7 +14,8 @@ repositories {
 }
 
 dependencies {
-  annotationProcessor "org.springframework.boot:spring-boot-configuration-processor"
+//  annotationProcessor "org.springframework.boot:spring-boot-configuration-processor"
+  annotationProcessor fileTree(dir: "$rootDir/support/lib/mods", include: "spring-boot-configuration-processor-2.1.4.RELEASE-modified.jar")
 
   implementation 'org.springframework.boot:spring-boot-starter'
   implementation 'org.codehaus.groovy:groovy'
